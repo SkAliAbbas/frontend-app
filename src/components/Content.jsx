@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./Content.css";
 
-const API_URL=import .meta.env.VITE_API_URL;
+const API_URL = import.meta.env.VITE_API_URL;
 function Content() {
   // const [count, setCount] = useState(0);
   const [products, setProducts] = useState([]);

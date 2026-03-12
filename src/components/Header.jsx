@@ -1,16 +1,20 @@
 import "./Header.css"
-
+import { Link } from "react-router-dom";
 function Header(){
     return <div className="App-Header">
-        <h1>My Application</h1>
+        <h1>My Store</h1>
         <ul>
-            <li>Home</li>
-            <li>Products</li>
-            <li>Users</li>
-            <li>Login</li>
-            <li>Logout</li>
+
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/cart">Cart</Link></li>
+            <li><Link to="/orders">Orders</Link></li>
+            <li><Link to="/login">Login</Link></li>
+            <li><Link to="/register">Register</Link></li>
+            <li><Link to="/logout">Logout</Link></li>
+            
         </ul>
         
         </div>
 }
+
 export default Header;
