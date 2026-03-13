@@ -12,9 +12,10 @@ export const AppContext = createContext();
 function App() {
   const [user, setUser] = useState({});
   const [cart, setCart] = useState([]);
+  const [orders, setOrders] = useState([]);
   return (
     <div>
-      <AppContext.Provider value={{ user, setUser, cart, setCart }}>
+      <AppContext.Provider value={{ user, setUser, cart, setCart, orders, setOrders }}>
         <BrowserRouter>
           <Header />
           <Routes>
