@@ -34,7 +34,9 @@ function Orders() {
     <div>
       <h1>My Orders</h1>
       <div>
-        {orders && orders.length > 0 ? (
+        {!user || !user.email ? (
+          <p>Please log in to view your orders.</p>
+        ) : orders && orders.length > 0 ? (
           orders.map((order) => (
             <div key={order._id}>
               <h3>Order Id: {order.orderDate}</h3>
