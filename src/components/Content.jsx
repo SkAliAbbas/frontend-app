@@ -20,16 +20,9 @@ function Content() {
 
   const addToCart = (product) => {
     const found = cart.find((item) => item._id === product._id);
-    if (found) {
-      setCart(
-        cart.map((item) =>
-          item._id === product._id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        )
-      );
-    } else {
-      setCart([...cart, { ...product, quantity: 1 }]);
+    if (!found) {
+      product.quantity = 1;
+      setCart([...cart,product]);
     }
   };
 
