@@ -1,14 +1,10 @@
 import { useContext, useState, useEffect } from "react";
 import { AppContext } from "../App";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
 function Cart() {
-  const { cart, setCart, user } = useContext(AppContext);
+  const { cart, setCart, orders, setOrders } = useContext(AppContext);
   const [orderValue, setOrderValue] = useState(0);
   const navigate = useNavigate();
-  const API_URL = import.meta.env.VITE_API_URL;
-
   const increment = (id) => {
     setCart(
       cart.map((item) => {
@@ -32,29 +28,6 @@ function Cart() {
     );
   };
 
-  const placeOrder = async () => {
-    const orderData = {
-      items: cart,
-      orderValue: orderValue,
-      userEmail: user.email,
-      orderDate: new Date().toISOString(),
-    };
-    console.log("Placing order with data:", orderData);
-    try {
-      const response = await axios.post(`${API_URL}/orders`, orderData, {
-        headers: { Authorization: `Bearer ${user.token}` },
-      });
-      console.log("Order placed successfully:", response.data);
-      // Clear the cart after successful order
-      setCart([]);
-      // Navigate to orders page
-      navigate("/orders");
-    } catch (error) {
-      console.error("Error placing order:", error);
-      alert("Failed to place order. Please try again.");
-    }
-  };
-
   useEffect(() => {
     setOrderValue(
       cart.reduce((sum, item) => {
@@ -62,6 +35,13 @@ function Cart() {
       }, 0),
     );
   }, [cart]);
+  const placeOrder = () => {
+    if (cart.length > 0) {
+      setOrders([...orders, ...cart]);
+      setCart([]);
+      navigate("/orders");
+    }
+  };
 
   return (
     <div>
