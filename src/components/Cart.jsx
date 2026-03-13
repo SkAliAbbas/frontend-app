@@ -33,10 +33,6 @@ function Cart() {
   };
 
   const placeOrder = async () => {
-    if (!user || !user.token) {
-      alert("Please log in to place an order.");
-      return;
-    }
     const orderData = {
       items: cart,
       orderValue: orderValue,
