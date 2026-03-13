@@ -39,10 +39,12 @@ function Cart() {
       userEmail: user.email,
       orderDate: new Date().toISOString(),
     };
+    console.log("Placing order with data:", orderData);
     try {
       const response = await axios.post(`${API_URL}/orders`, orderData, {
         headers: { Authorization: `Bearer ${user.token}` },
       });
+      console.log("Order placed successfully:", response.data);
       // Clear the cart after successful order
       setCart([]);
       // Navigate to orders page

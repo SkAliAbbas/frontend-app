@@ -7,15 +7,18 @@ function Orders() {
   const [orders, setOrders] = useState([]);
 
   const fetchOrders = async () => {
+    console.log("User:", user);
     if (!user || !user.email || !user.token) {
       console.error("User not logged in");
       return;
     }
     try {
+      console.log("Fetching orders for", user.email);
       const url = `${API_URL}/orders/${user.email}`;
       const response = await axios.get(url, {
         headers: { Authorization: `Bearer ${user.token}` },
       });
+      console.log("Orders response:", response.data);
       setOrders(response.data);
     } catch (error) {
       console.error("Error fetching orders:", error);
