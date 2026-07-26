@@ -1,16 +1,75 @@
-# React + Vite
+# 🛒 Full-Stack E-Commerce System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack e-commerce web application built using the **MERN Stack**. This repository contains the **React.js frontend**, while the backend is maintained in a separate repository.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🌐 **Live Application:** https://frontend-app-lovat-three.vercel.app/
 
-## React Compiler
+## 📂 Repositories
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend:** https://github.com/SkAliAbbas/frontend-app
+- **Backend:** https://github.com/SkAliAbbas/backend-app1
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- User Registration & Login
+- Secure Authentication
+- Product Browsing
+- Shopping Cart
+- Responsive User Interface
+- REST API Integration
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React.js
+- Vite
+- HTML5
+- CSS3
+- JavaScript
+
+### Backend
+- Node.js
+- Express.js
+
+### Database
+- MongoDB
+
+## ⚙️ Installation
+
+### Clone the Frontend Repository
+
+```bash
+git clone https://github.com/SkAliAbbas/frontend-app.git
+cd frontend-app
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Start the Development Server
+
+```bash
+npm run dev
+```
+
+The application will be available at:
+
+```
+http://localhost:5173
+```
+
+## 📸 Screenshots
+
+> Add screenshots of the Home Page, Login Page, Product Page, and Cart here.
+
+## 👨‍💻 Author
+
+**Shaik Aliabbas**
+
+- GitHub: https://github.com/SkAliAbbas
+- LinkedIn: https://www.linkedin.com/in/aliabbas10
